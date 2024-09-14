@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A68E0962C8B743A0052F391 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0952C8B743A0052F391 /* Card.swift */; };
+		7A68E0982C8B7B3E0052F391 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0972C8B7B3E0052F391 /* CardView.swift */; };
+		7A68E09A2C8F68CC0052F391 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0992C8F68CC0052F391 /* Deck.swift */; };
+		7A68E09C2C8F69050052F391 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E09B2C8F69050052F391 /* DeckView.swift */; };
 		7A91F25C2C87850600EA7913 /* SolitaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91F25B2C87850600EA7913 /* SolitaireApp.swift */; };
 		7A91F25E2C87850600EA7913 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91F25D2C87850600EA7913 /* ContentView.swift */; };
 		7A91F2602C87850C00EA7913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A91F25F2C87850C00EA7913 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A68E0952C8B743A0052F391 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7A68E0972C8B7B3E0052F391 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		7A68E0992C8F68CC0052F391 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		7A68E09B2C8F69050052F391 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		7A91F2582C87850600EA7913 /* Solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solitaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A91F25B2C87850600EA7913 /* SolitaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolitaireApp.swift; sourceTree = "<group>"; };
 		7A91F25D2C87850600EA7913 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 			children = (
 				7A91F25B2C87850600EA7913 /* SolitaireApp.swift */,
 				7A91F25D2C87850600EA7913 /* ContentView.swift */,
+				7A68E0952C8B743A0052F391 /* Card.swift */,
+				7A68E0972C8B7B3E0052F391 /* CardView.swift */,
+				7A68E0992C8F68CC0052F391 /* Deck.swift */,
+				7A68E09B2C8F69050052F391 /* DeckView.swift */,
 				7A91F25F2C87850C00EA7913 /* Assets.xcassets */,
 				7A91F2612C87850C00EA7913 /* Preview Content */,
 			);
@@ -258,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A91F25E2C87850600EA7913 /* ContentView.swift in Sources */,
+				7A68E0962C8B743A0052F391 /* Card.swift in Sources */,
+				7A68E09A2C8F68CC0052F391 /* Deck.swift in Sources */,
+				7A68E0982C8B7B3E0052F391 /* CardView.swift in Sources */,
 				7A91F25C2C87850600EA7913 /* SolitaireApp.swift in Sources */,
+				7A68E09C2C8F69050052F391 /* DeckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
