@@ -12,6 +12,14 @@ struct ContentView: View {
     @State var deck = Deck()
     
     @State var shownCards = [Card]()
+
+    @State var Astack1 = []
+    
+    @State var Astack2 = []
+    
+    @State var Astack3 = []
+    
+    @State var Astack4 = []
     
     @State private var card1 = Image("card_back")
     
@@ -111,35 +119,49 @@ struct ContentView: View {
                     
                     card1
                         .frame(width: 53, height: 60)
-                        .background(.green)
                         .foregroundStyle(.white)
                         .dropDestination(for: Image.self) { items, location in
-                            card1 = items.first ?? Image(systemName: "photo")
-                            return true
+                            if checkValidMove(currentCard: <#T##Card#>, stack: <#T##[Card]#>) {
+                                card1 = items.first ?? Image(systemName: "photo")
+                                return true
+                            } else {
+                                return false
+                            }
                         }
                     card2
                         .frame(width: 53, height: 60)
-                        .background(.green)
                         .foregroundStyle(.white)
                         .dropDestination(for: Image.self) { items, location in
-                            card2 = items.first ?? Image(systemName: "photo")
-                            return true
+                            if checkValidMove(currentCard: <#T##Card#>, stack: <#T##[Card]#>) {
+                                card2 = items.first ?? Image(systemName: "photo")
+                                return true
+                            } else {
+                                return false
+                            }
                         }
                     card3
                         .frame(width: 53, height: 60)
-                        .background(.green)
                         .foregroundStyle(.white)
                         .dropDestination(for: Image.self) { items, location in
-                            card3 = items.first ?? Image(systemName: "photo")
-                            return true
+                            
+                            if checkValidMove(currentCard: <#T##Card#>, stack: <#T##[Card]#>) {
+                                card3 = items.first ?? Image(systemName: "photo")
+                                return true
+                            } else {
+                                return false
+                            }
                         }
                     card4
                         .frame(width: 53, height: 60)
-                        .background(.green)
                         .foregroundStyle(.white)
                         .dropDestination(for: Image.self) { items, location in
-                            card4 = items.first ?? Image(systemName: "photo")
-                            return true
+                            
+                            if checkValidMove(currentCard: , currentCard: <#Card#>, stack: Astack1) == true {
+                                card4 = items.first ?? Image(systemName: "photo")
+                                return true
+                            } else {
+                                return false
+                            }
                         }
                 }
             }
@@ -256,8 +278,36 @@ struct ContentView: View {
             let card3 = deck.dealCard()
             shownCards.append(card3)
         }
+    
+    func checkValidMove(currentCard: Card, stack: [Card]) -> Bool{
+        var validMove = false
+        var suitCardSelected = ""
+        var suitCardDown = ""
+        var cardColor = ""
+        
+        
+        // empty stack should work
+        if stack.isEmpty && currentCard.symbol == "A"{
+            return true
+        } else if stack.isEmpty {
+            return false
+        }
+        
+        let suit = stack[0].suit
+        if suit == currentCard.suit && stack.last?.symbol == "10" && currentCard.symbol == "J" {
+            return true
+        }
+        if suit == currentCard.suit && stack.last?.value == currentCard.value - 1 {
+            return true
+        }else {
+            return false
+        }
+        
+        return false
+        
+        
     }
-
+}
     
     #Preview(body: {
         ContentView()
